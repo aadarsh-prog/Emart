@@ -15,6 +15,7 @@ import java.util.List;
 public class EmpDAO {
     public static String getNextEmpid()throws SQLException
     {
+        //to generete next id
          Connection con = DbConnection.getConnection();
          Statement st =con.createStatement();
          ResultSet rs =st.executeQuery("select max(empid) from employees");
